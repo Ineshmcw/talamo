@@ -28,7 +28,8 @@ The `whl_installation.sh` script performs the following actions:
 
 - **Creates a Virtual Environment**: A virtual environment is created with the name of the folder, using Python version 3.10 as the default.
 - **Installs the Talamo Wheel File**: The script installs the Talamo wheel file into the newly created virtual environment.
-- **Automates Virtual Environment Activation**: Adds activation and deactivation code to your bash profile (`.bashrc` or `.zshrc`) to automatically activate the virtual environment when entering the folder and deactivate it when leaving.
+- **Automates Virtual Environment Activation**: Adds activation and deactivation code to your bash profile (`.bashrc`) to automatically activate the virtual environment when entering the folder and deactivate it when leaving.
+- **Updates the vscode settings.json for python Intrepretor**: Adds the Virtual Environment's python path as python intrepretor in the settings.json.
 
 Things to Make Sure Before Running the Script
 =============================================
