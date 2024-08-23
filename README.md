@@ -21,7 +21,7 @@ To set up the project, follow these steps:
       chmod +x whl_installation.sh
 ```
 
-What the Script Does
+What the whl_installation Script Does
 ====================
 
 The `whl_installation.sh` script performs the following actions:
