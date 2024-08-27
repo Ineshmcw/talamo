@@ -51,12 +51,12 @@ else
 fi
 
 # Check if the function is already present in .bashrc
-if ! grep -q "function cd" ~/.bashrc; then
+if ! grep -q "cd.*$PROJECT_DIR" ~/.bashrc; then
   echo 'function cd() {
   builtin cd "$@"
   if [[ -z "$VIRTUAL_ENV" ]] ; then
-      if [[ "$PWD" == "/home/inesh/Innatera/python/test" ]] ; then
-        source ./test_venv/bin/activate
+      if [[ "$PWD" == "'"$PROJECT_DIR"'" ]] ; then
+        source '"$PROJECT_DIR"'/'"$VENV_NAME"'/bin/activate
       fi
   else
       parentdir="$(dirname "$VIRTUAL_ENV")"

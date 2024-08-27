@@ -6,8 +6,8 @@ To set up the project, follow these steps:
 
 1. **Clone the Repository** (if not already done):
    ```
-      git clone https://github.com/Ineshmcw/Python.git
-      cd Python
+      git clone https://github.com/Ineshmcw/talamo.git
+      cd talamo
    ```
 
 3. **Run the Installation Script**:
