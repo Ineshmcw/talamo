@@ -8,12 +8,13 @@ fi
 
 PROJECT_DIR=$1
 SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+PROJECT_NAME=$(basename "$PROJECT_DIR")
 VSCODE_SETTINGS_DIR="$PROJECT_DIR/.vscode"
 SETTINGS_FILE="$VSCODE_SETTINGS_DIR/settings.json"
 
 PYTHON_VERSION=$(python3 -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')")
 ORIGINAL_VENV_DIR="${SCRIPT_DIR}/talamo${PYTHON_VERSION//./}"
-TARGET_VENV_DIR="${PROJECT_DIR}/talamo${PYTHON_VERSION//./}"
+TARGET_VENV_DIR="${PROJECT_DIR}/${PROJECT_NAME}_venv"
 INTERPRETER_PATH="$TARGET_VENV_DIR/bin/python"
 WHL_FILE="${SCRIPT_DIR}/wheel_files/talamo-2.0.0a2-cp${PYTHON_VERSION//./}-cp${PYTHON_VERSION//./}-linux_x86_64.whl"
 
