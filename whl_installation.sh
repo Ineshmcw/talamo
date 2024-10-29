@@ -43,7 +43,6 @@ else
         
         # Set INTERPRETER_PATH to the Python executable in the new virtual environment
         INTERPRETER_PATH="$TARGET_VENV_DIR/bin/python"
-        echo "Using the globally installed talamo while creating the virtual env"
     else
         echo "Error: Talamo library is not installed globally or in the specified TALAMO_PATH."
         exit 1
@@ -61,4 +60,3 @@ echo '{
 
 echo "VSCode settings updated with Python interpreter: $INTERPRETER_PATH"
 
-echo "Setup complete. Virtual environment is ready at $TARGET_VENV_DIR."
