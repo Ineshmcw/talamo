@@ -2,7 +2,7 @@
 
 # Check if PROJECT_DIR is provided
 if [ -z "$1" ]; then
-    echo "Usage: $0 <PROJECT_DIR> [TALAMO_PATH]"
+    echo "Usage: $0 <PROJECT_DIR>"
     exit 1
 fi
 
