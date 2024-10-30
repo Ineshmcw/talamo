@@ -18,6 +18,7 @@ INTERPRETER_PATH=""
 if [ -n "$TALAMO_PATH" ]; then
     # Check if Talamo exists in the specified TALAMO_PATH
     if [ ! -f "$TALAMO_PATH/talamo" ]; then
+        echo "$TALAMO_PATH/talamo"
         echo "Error: Talamo executable not found in specified TALAMO_PATH."
         exit 1
     fi
@@ -25,14 +26,7 @@ if [ -n "$TALAMO_PATH" ]; then
     # get python executable
     PYTHON_EXECUTABLE=$(dirname "$TALAMO_PATH")/python
 
-    # Check if Talamo is installed in this environment
-    if ! "$PYTHON_EXECUTABLE" -c "import talamo" &> /dev/null; then
-        echo "Error: Talamo library is not installed in the specified TALAMO_PATH environment."
-        exit 1
-    else
-        INTERPRETER_PATH="$PYTHON_EXECUTABLE"
-        echo "Talamo is installed in the specified TALAMO_PATH. Using its Python interpreter."
-    fi
+    INTERPRETER_PATH="$PYTHON_EXECUTABLE"
     echo "Talamo path is not provided checking if talamo is available globally"
 else
     # Check if Talamo library is installed globally
